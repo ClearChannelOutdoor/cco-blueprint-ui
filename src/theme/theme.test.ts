@@ -16,12 +16,11 @@ describe('theme', () => {
     expect(theme.typography.fontFamily).toContain('-apple-system')
   })
   it('sets h1 fontWeight to 700', () => {
-    expect((theme.typography as Record<string, unknown>)['h1']).toMatchObject({
+    expect(theme.typography.h1).toMatchObject({
       fontWeight: 700,
     })
   })
   it('sets h1 fontFamily to include Century Gothic', () => {
-    const h1 = (theme.typography as Record<string, unknown>)['h1'] as Record<string, unknown>
-    expect(String(h1.fontFamily)).toContain('Century Gothic')
+    expect(theme.typography.h1?.fontFamily).toContain('Century Gothic')
   })
 })
