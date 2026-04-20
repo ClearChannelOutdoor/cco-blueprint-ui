@@ -52,6 +52,15 @@ const StyledCardBody = styled('div')`
   text-align: center;
 `
 
+const Styled = {
+  Backdrop: StyledBackdrop,
+  Card: StyledCard,
+  CardHeader: StyledCardHeader,
+  CardTitle: StyledCardTitle,
+  CardBody: StyledCardBody,
+}
+export default Styled
+
 export function LoginModal({ open, title, loginUrl, onLoginClick, children }: LoginModalProps) {
   if (!open) return null
 
