@@ -1,4 +1,4 @@
-# @clearchannel/ui-blueprint
+# @clearchannel/cco-blueprint-ui
 
 CCO brand MUI theme, components, and layout primitives for TanStack Start apps at Clear Channel Outdoor.
 
@@ -18,7 +18,7 @@ Add a `.npmrc` to your project root (gitignored) to authenticate with GitHub Pac
 Then install:
 
 ```bash
-npm install @clearchannel/ui-blueprint
+npm install @clearchannel/cco-blueprint-ui
 ```
 
 ### Peer dependencies
@@ -38,7 +38,7 @@ npm install react react-dom @mui/material @mui/icons-material @emotion/react @em
 Drop `AppShell` at the root of your app. It handles the MUI theme, header, main content area, and optional SSO login modal in one component.
 
 ```tsx
-import { AppShell } from '@clearchannel/ui-blueprint'
+import { AppShell } from '@clearchannel/cco-blueprint-ui'
 
 function App() {
   const { user, isAuthenticated, logout } = useAuth() // your auth logic
@@ -62,7 +62,7 @@ function App() {
 For apps that don't use the login modal:
 
 ```tsx
-import { AppLayout } from '@clearchannel/ui-blueprint'
+import { AppLayout } from '@clearchannel/cco-blueprint-ui'
 
 function App() {
   return (
@@ -83,7 +83,7 @@ In your root route, add the CCO favicon via `head()`:
 
 ```tsx
 // app/routes/__root.tsx
-import { ccoFaviconHref } from '@clearchannel/ui-blueprint'
+import { ccoFaviconHref } from '@clearchannel/cco-blueprint-ui'
 import { createRootRoute } from '@tanstack/react-router'
 
 export const Route = createRootRoute({
@@ -101,7 +101,7 @@ TanStack Start requires Emotion's `CacheProvider` for SSR hydration. Wrap your p
 import { CacheProvider } from '@emotion/react'
 import { ThemeProvider } from '@mui/material'
 import createCache from '@emotion/cache'
-import { theme } from '@clearchannel/ui-blueprint'
+import { theme } from '@clearchannel/cco-blueprint-ui'
 
 function Providers({ children }: { children: React.ReactNode }) {
   const emotionCache = createCache({ key: 'css' })
@@ -189,7 +189,7 @@ Full-screen SSO overlay. UI only — no auth logic.
 ### Brand tokens
 
 ```ts
-import { ccoColors, theme, ccoFaviconHref, ccoLogoSrc } from '@clearchannel/ui-blueprint'
+import { ccoColors, theme, ccoFaviconHref, ccoLogoSrc } from '@clearchannel/cco-blueprint-ui'
 
 ccoColors.skyBlue       // '#0099D8'
 ccoColors.nightBlue     // '#000434'
@@ -212,7 +212,7 @@ To test changes before publishing:
 npm run build
 
 # In your app — install the local package
-# package.json: "@clearchannel/ui-blueprint": "file:../ui-blueprint"
+# package.json: "@clearchannel/cco-blueprint-ui": "file:../ui-blueprint"
 npm install
 ```
 
