@@ -5,6 +5,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [react()],
   build: {
+    assetsInlineLimit: 102400, // inline assets up to 100KB as base64 — keeps logo self-contained in the bundle
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs'],

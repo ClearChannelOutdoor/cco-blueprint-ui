@@ -1,7 +1,7 @@
 export { ccoColors } from './theme/colors'
 export { ccoFaviconHref, FaviconLink } from './theme/favicon'
 export { theme } from './theme/theme'
-export { Header } from './components/Header'
+export { Header, ccoLogoSrc } from './components/Header'
 export type { HeaderProps } from './components/Header'
 export { AppLayout } from './components/AppLayout'
 export type { AppLayoutProps } from './components/AppLayout'
